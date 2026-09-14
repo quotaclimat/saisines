@@ -130,7 +130,7 @@
     var all = (data.saisines || []).slice().sort(function (a, b) {
       return (b.date || "").localeCompare(a.date || "");
     });
-    var state = { year: "", media: "", shown: pageSize };
+    var state = { year: "", media: "", statut: "", shown: pageSize };
 
     /* ---- Chiffres clés ---- */
     var byMedia = countBy(all, function (s) { return s.media; });
@@ -166,11 +166,21 @@
     /* ---- Filtres ---- */
     var years = uniq(all.map(function (s) { return year(s.date); })).sort().reverse();
     var medias = uniq(all.map(function (s) { return s.media; })).sort(function (a, b) { return a.localeCompare(b, "fr"); });
+    // Statuts dans l'ordre du parcours d'une saisine, les inconnus en fin de liste.
+    var ORDER = ["encours", "recours", "intervention", "garde", "demeure", "sanction", "perdue", "autre"];
+    var statuts = uniq(all.map(function (s) { return s.statut; })).sort(function (a, b) {
+      return ORDER.indexOf(statutKey(a)) - ORDER.indexOf(statutKey(b)) || a.localeCompare(b, "fr");
+    });
+    var statutOptions = (wonTotal ? [["__gagnee", "Saisines gagnées (toutes)"]] : [])
+      .concat(statuts.map(function (v) { return [v, v]; }));
 
     function select(name, label, allLabel, values) {
       return '<div class="qcs-filter"><label for="qcs-f-' + name + '">' + label + "</label>" +
         '<select id="qcs-f-' + name + '" data-f="' + name + '"><option value="">' + allLabel + "</option>" +
-        values.map(function (v) { return '<option value="' + esc(v) + '">' + esc(v) + "</option>"; }).join("") +
+        values.map(function (v) {
+          var val = Array.isArray(v) ? v[0] : v, lab = Array.isArray(v) ? v[1] : v;
+          return '<option value="' + esc(val) + '">' + esc(lab) + "</option>";
+        }).join("") +
         "</select></div>";
     }
 
@@ -180,6 +190,7 @@
         '<div class="qcs-filters">' +
           select("year", "Date", "Toutes les années", years) +
           select("media", "Média", "Tous les médias", medias) +
+          select("statut", "Type", "Tous les types", statutOptions) +
           '<button type="button" class="qcs-reset">Réinitialiser</button>' +
           '<span class="qcs-count" aria-live="polite"></span>' +
         "</div>" +
@@ -202,7 +213,8 @@
     function filtered() {
       return all.filter(function (s) {
         return (!state.year || year(s.date) === state.year) &&
-          (!state.media || s.media === state.media);
+          (!state.media || s.media === state.media) &&
+          (!state.statut || (state.statut === "__gagnee" ? isWon(statutKey(s.statut)) : s.statut === state.statut));
       });
     }
 
@@ -233,7 +245,7 @@
       });
     });
     root.querySelector(".qcs-reset").addEventListener("click", function () {
-      state.year = state.media = "";
+      state.year = state.media = state.statut = "";
       state.shown = pageSize;
       root.querySelectorAll("select[data-f]").forEach(function (sel) { sel.value = ""; });
       draw();

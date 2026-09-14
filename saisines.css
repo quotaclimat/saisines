@@ -19,18 +19,20 @@
   -webkit-font-smoothing: antialiased;
 }
 .qcs-root *, .qcs-root *::before, .qcs-root *::after { box-sizing: border-box; }
-.qcs-root h2, .qcs-root h3, .qcs-root p { margin: 0; }
+/* :where() garde cette remise à zéro à faible spécificité pour ne pas écraser nos propres marges */
+.qcs-root :where(h2, h3, p) { margin: 0; }
 .qcs-root button, .qcs-root select { font-family: inherit; }
 .qcs-root [hidden] { display: none !important; }
 
 /* ── Titres de section ── */
-.qcs-h2 {
+/* Titres : sélecteurs à double classe pour passer devant les styles h2/h3 du thème WordPress */
+.qcs-root .qcs-h2 {
+  font-family: inherit; color: var(--qcs-green-800); text-transform: none; text-decoration: none; background: none; padding: 0; border: 0;
   font-size: clamp(1.35rem, 2.2vw, 1.75rem);
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.2;
-  margin-bottom: 1.25rem !important;
-  color: var(--qcs-green-800);
+  margin: 0 0 1.25rem;
 }
 .qcs-section { margin-bottom: 3rem; }
 
@@ -55,7 +57,7 @@
 .qcs-stat-list li { display: flex; justify-content: space-between; gap: .75rem; font-size: .82rem; }
 .qcs-stat-list .qcs-k { color: var(--qcs-muted); font-weight: 500; }
 .qcs-stat-list .qcs-v { font-weight: 700; font-variant-numeric: tabular-nums; }
-.qcs-updated { margin-top: .75rem !important; font-size: .75rem; color: var(--qcs-muted); }
+.qcs-root .qcs-updated { margin: .75rem 0 0; font-size: .75rem; color: var(--qcs-muted); }
 
 /* ── Filtres ── */
 .qcs-filters {
@@ -93,8 +95,9 @@
 .qcs-card:hover { transform: translateY(-2px); box-shadow: 0 12px 32px -4px rgba(0, 0, 0, .15); border-color: var(--qcs-green); }
 .qcs-card:focus-visible { outline: 4px solid var(--qcs-red); outline-offset: 2px; }
 .qcs-card-top { display: flex; align-items: center; justify-content: space-between; gap: .5rem; margin-bottom: .75rem; }
-.qcs-card-title {
-  font-size: .95rem; font-weight: 700; line-height: 1.35; margin-bottom: .875rem;
+.qcs-root .qcs-card-title {
+  font-family: inherit; color: var(--qcs-green-800); text-transform: none; text-decoration: none; background: none; padding: 0; border: 0;
+  font-size: .95rem; font-weight: 700; line-height: 1.35; letter-spacing: normal; margin: 0 0 .875rem;
   display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
   min-height: calc(1.35em * 3);
 }
@@ -108,7 +111,7 @@
   position: absolute; inset: 0; display: grid; place-items: center;
   font-size: 1.1rem; font-weight: 800; color: var(--qcs-green); opacity: .55; letter-spacing: -.01em;
 }
-.qcs-meta { font-size: .78rem; color: var(--qcs-muted); font-weight: 500; margin-top: auto; }
+.qcs-root .qcs-meta { font-size: .78rem; color: var(--qcs-muted); font-weight: 500; margin: auto 0 0; }
 .qcs-meta strong { color: var(--qcs-green-800); font-weight: 700; }
 
 /* ── Badges de statut ── */
@@ -159,8 +162,8 @@
 .qcs-dialog .qcs-thumb { border-radius: 0; margin: 0; }
 .qcs-dialog-body { padding: 1.5rem 1.75rem 1.75rem; }
 .qcs-dialog-meta { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem .75rem; margin-bottom: .75rem; font-size: .85rem; font-weight: 600; }
-.qcs-dialog-title { font-size: 1.25rem; font-weight: 700; line-height: 1.3; letter-spacing: -.01em; margin-bottom: .5rem !important; }
-.qcs-dialog-motif { font-size: .92rem; color: var(--qcs-muted); margin-bottom: 1.25rem !important; }
+.qcs-root .qcs-dialog-title { font-family: inherit; color: var(--qcs-green-800); text-transform: none; text-decoration: none; background: none; padding: 0; border: 0; font-size: 1.25rem; font-weight: 700; line-height: 1.3; letter-spacing: -.01em; margin: 0 0 .5rem; }
+.qcs-root .qcs-dialog-motif { font-size: .92rem; color: var(--qcs-muted); margin: 0 0 1.25rem; }
 .qcs-acc { margin-top: .75rem; border-radius: .5rem; overflow: hidden; border: 1px solid var(--qcs-line); background: #fff; }
 .qcs-acc summary {
   list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center;

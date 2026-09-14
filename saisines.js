@@ -227,7 +227,7 @@
         var card = h(
           '<button type="button" class="qcs-card" aria-haspopup="dialog">' +
             '<div class="qcs-card-top">' + badge(s) + "</div>" +
-            '<h3 class="qcs-card-title">' + esc(s.name) + "</h3>" +
+            '<span class="qcs-card-title">' + esc(s.name) + "</span>" +
             thumb(s, dataUrl) +
             '<p class="qcs-meta">' + metaLine(s) + "</p>" +
           "</button>");

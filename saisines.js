@@ -84,9 +84,10 @@
     return '<span class="qcs-badge qcs-badge--' + statutKey(s.statut) + '">' + esc(s.statut) + "</span>";
   }
 
-  function thumb(s, dataUrl) {
+  function thumb(s) {
     if (s.illustration) {
-      var src = new URL(s.illustration, dataUrl).href;
+      // Chemins d'images relatifs à la racine du site (dossier du script), pas au dossier du JSON
+      var src = new URL(s.illustration, BASE).href;
       return '<div class="qcs-thumb"><img src="' + esc(src) + '" alt="" loading="lazy" decoding="async"></div>';
     }
     return '<div class="qcs-thumb"><span class="qcs-thumb-empty">' + esc(s.media || "QuotaClimat") + "</span></div>";
@@ -231,7 +232,7 @@
           '<button type="button" class="qcs-card" aria-haspopup="dialog">' +
             '<div class="qcs-card-top">' + badge(s) + "</div>" +
             '<span class="qcs-card-title">' + esc(s.name) + "</span>" +
-            thumb(s, dataUrl) +
+            thumb(s) +
             '<p class="qcs-meta">' + metaLine(s) + "</p>" +
           "</button>");
         card.addEventListener("click", function () { dialog.open(s, card); });
@@ -304,7 +305,7 @@
           dlg.innerHTML =
             '<button type="button" class="qcs-close" aria-label="Fermer">×</button>' +
             '<div class="qcs-dialog-scroll">' +
-              thumb(s, dataUrl) +
+              thumb(s) +
               '<div class="qcs-dialog-body">' +
                 '<div class="qcs-dialog-meta">' + badge(s) + "<span>" + metaLine(s) + "</span></div>" +
                 '<h3 class="qcs-dialog-title" id="qcs-dlg-title">' + esc(s.name) + "</h3>" +

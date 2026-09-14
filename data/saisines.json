@@ -191,7 +191,7 @@
    "date": "2026-04-15",
    "statut": "En cours",
    "motif": "Manque de rigueur et d’honnêteté de l’information",
-   "propos_html": "",
+   "propos_html": "R. Ménard &quot;qu&#x27;il y ait un changement climatique mais enfin moi je le vois chez moi sans l&#x27;ombre d&#x27;un doute, mais la part du réchauffement climatique due à l&#x27;activité humaine, la part des cycles, des cycles du temps et tout ça, je n&#x27;en sais rien”",
    "science_html": "",
    "illustration": "",
    "decryptage_url": "https://www.linkedin.com/posts/quotaclimat_mercredi-sur-lci-la-chaine-info-le-maire-activity-7450800340863696896-iq6H?utm_source=share&utm_medium=member_desktop&rcm=ACoAADahfOQB3jITrGVNZDSALwz1T3So60L4Z1g",
@@ -219,7 +219,7 @@
    "date": "2026-04-06",
    "statut": "En cours",
    "motif": "Honnêteté de l’information et maîtrise de l’antenne",
-   "propos_html": "",
+   "propos_html": "&quot;J&#x27;ai déjà dit une fois sur un sur un format avec Fred Hermel, on avait parlé un samedi, moi je suis dans le domaine du bâtiment industriel je monte du photovoltaïque. Si tous les français, une grosse partie des français, passaient au véhicule électrique la France serait en shut down, comme ça a été en Espagne il y a un an. Parce que le circuit, c&#x27;est bien beau d&#x27;acheter une voiture électrique, sauf qu’il y a quelque chose qui vous amène l’électricité sur le réseau. Aujourd’hui, on a un réseau qui est vétuste, c’est comme si vous aviez une deux chevaux et que vous mettiez un moteur de Ferrari à l&#x27;intérieur, au bout d&#x27;un moment il va se passer un problème.”",
    "science_html": "",
    "illustration": "",
    "decryptage_url": "",
@@ -233,7 +233,7 @@
    "date": "2026-04-02",
    "statut": "En cours",
    "motif": "Manque de rigueur et d’honnêteté de l’information",
-   "propos_html": "",
+   "propos_html": "Marion Maréchal-Le Pen explique que c’est “la loi Hulot qui nous interdit aujourd&#x27;hui (...) d’exploiter nos ressources en hydrocarbures ou en gaz” et “pas nécessairement seulement le gaz de schiste, on peut penser qu&#x27;on a du pétrole du gaz que nous avons dans nos sous-sols, sur nos territoires, et que nous n&#x27;avons pas le droit aujourd&#x27;hui d&#x27;exploiter du fait de cette loi”",
    "science_html": "",
    "illustration": "",
    "decryptage_url": "https://www.linkedin.com/posts/quotaclimat_une-petite-musique-monte-lextr%C3%AAme-droite-activity-7446957402328928257-_mqn?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAttNCcBT9cAaKh9N4REMZgI4eup0dkZHdE",
@@ -478,20 +478,6 @@
    "decryptage_html": ""
   },
   {
-   "id": "bb8b82729c70",
-   "name": "Article de Erwan Seznec sur la biodiversité",
-   "media": "Le Point",
-   "emission": "",
-   "date": "2024-09-22",
-   "statut": "En cours",
-   "motif": "Exactitude de l’information",
-   "propos_html": "",
-   "science_html": "",
-   "illustration": "",
-   "decryptage_url": "https://www.linkedin.com/posts/quotaclimat_quel-naufrage-journalistique-le-point-insinue-activity-7244225557641461760-UI4T/?originalSubdomain=fr",
-   "decryptage_html": ""
-  },
-  {
    "id": "31be17feef89",
    "name": "TF1 invite à remplir sa cuve de fioul",
    "media": "TF1",
@@ -503,20 +489,6 @@
    "science_html": "",
    "illustration": "",
    "decryptage_url": "https://www.linkedin.com/feed/update/urn:li:activity:7241121146102779904",
-   "decryptage_html": ""
-  },
-  {
-   "id": "7d0c7c3cc4ce",
-   "name": "“La voiture électrique, plus écolo ? Un énorme mensonge”",
-   "media": "La Manche Libre",
-   "emission": "",
-   "date": "2024-07-24",
-   "statut": "Irrecevable",
-   "motif": "Désinformation sur l’impact écologique des véhicules électriques.",
-   "propos_html": "",
-   "science_html": "",
-   "illustration": "",
-   "decryptage_url": "",
    "decryptage_html": ""
   },
   {

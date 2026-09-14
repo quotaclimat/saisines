@@ -46,7 +46,6 @@ FIELDS = {
     "illustration": "Illustration",
     "statut": "Statut",
     "decryptage": "Decryptage",
-    "instance": "Type",   # Arcom / CDJM
     "motif": "Motif",
 }
 REQUIRED = {"name", "media", "date", "statut"}
@@ -231,7 +230,6 @@ def main():
             "media": as_text(prop(page, FIELDS["media"])),
             "emission": as_text(prop(page, FIELDS["emission"])),
             "date": as_date(prop(page, FIELDS["date"])),
-            "instance": as_text(prop(page, FIELDS["instance"])),
             "statut": statut,
             "motif": as_text(prop(page, FIELDS["motif"])),
             "propos_html": as_html(prop(page, FIELDS["propos"])),

@@ -1,6 +1,6 @@
-# Saisines QuotaClimat : Arcom & CDJM
+# Saisines Arcom de QuotaClimat
 
-Tableau public des saisines de l'Arcom et du CDJM déposées par QuotaClimat.
+Tableau public des saisines de l'Arcom déposées par QuotaClimat.
 La source de vérité est la table Notion des saisines ; ce dépôt en publie une
 copie filtrée (champs publics uniquement) via GitHub Pages.
 
@@ -15,7 +15,7 @@ Notion ──(GitHub Actions, chaque jour 5h UTC)──> data/saisines.json + im
 ```
 
 - `sync_notion.py` interroge l'API Notion, n'exporte que les champs publics
-  (Name, Media, Emission, Date, Type, Motif, Propos tenus, Etat des connaissances scientifiques,
+  (Name, Media, Emission, Date, Motif, Propos tenus, Etat des connaissances scientifiques,
   Illustration, Statut, Decryptage) des lignes cochées « Public » dont le Statut est rempli, et
   télécharge les illustrations (les URL de fichiers Notion expirent après 1 h).
 - Le workflow `.github/workflows/sync.yml` committe uniquement si quelque chose a changé.
@@ -40,8 +40,7 @@ Dans un bloc « HTML personnalisé » :
 ```
 
 Le script injecte sa feuille de style (classes préfixées `qcs-`), récupère le JSON
-et affiche : chiffres clés, filtres, grille de cartes, fiche détaillée et
-section « Agir avec nous ». Pas d'iframe : la page hérite de la police Poppins du site.
+et affiche : chiffres clés, filtres, grille de cartes, fiche détaillée. Pas d'iframe : la page hérite de la police Poppins du site.
 Chaque saisine a un lien direct du type `…/page/#saisine-<id>`.
 
 Options du conteneur : `data-src` (autre URL de JSON), `data-css="false"`

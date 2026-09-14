@@ -1,4 +1,4 @@
-/* Tableau des saisines QuotaClimat (Arcom & CDJM).
+/* Tableau des saisines QuotaClimat (Arcom).
  *
  * Intégration :
  *   <div data-qc-saisines></div>
@@ -14,11 +14,6 @@
 
   var SCRIPT = document.currentScript;
   var BASE = SCRIPT ? new URL(".", SCRIPT.src).href : new URL(".", location.href).href;
-
-  var LINKS = {
-    arcom: "https://www.arcom.fr/signaler-ou-alerter/programme-publicite",
-    cdjm: "https://cdjm.org/saisir-le-conseil/"
-  };
 
   var MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet",
     "août", "septembre", "octobre", "novembre", "décembre"];
@@ -134,7 +129,7 @@
     var all = (data.saisines || []).slice().sort(function (a, b) {
       return (b.date || "").localeCompare(a.date || "");
     });
-    var state = { year: "", media: "", instance: "", shown: pageSize };
+    var state = { year: "", media: "", shown: pageSize };
 
     /* ---- Chiffres clés ---- */
     var byMedia = countBy(all, function (s) { return s.media; });
@@ -170,7 +165,6 @@
     /* ---- Filtres ---- */
     var years = uniq(all.map(function (s) { return year(s.date); })).sort().reverse();
     var medias = uniq(all.map(function (s) { return s.media; })).sort(function (a, b) { return a.localeCompare(b, "fr"); });
-    var instances = uniq(all.map(function (s) { return s.instance; })).sort();
 
     function select(name, label, allLabel, values) {
       return '<div class="qcs-filter"><label for="qcs-f-' + name + '">' + label + "</label>" +
@@ -185,7 +179,6 @@
         '<div class="qcs-filters">' +
           select("year", "Date", "Toutes les années", years) +
           select("media", "Média", "Tous les médias", medias) +
-          (instances.length ? select("instance", "Type", "Arcom et CDJM", instances) : "") +
           '<button type="button" class="qcs-reset">Réinitialiser</button>' +
           '<span class="qcs-count" aria-live="polite"></span>' +
         "</div>" +
@@ -193,34 +186,12 @@
         '<div class="qcs-more-wrap"><button type="button" class="qcs-btn qcs-btn--ghost qcs-more">Voir plus</button></div>' +
       "</section>";
 
-    var ctaHtml =
-      '<section class="qcs-section qcs-cta">' +
-        '<p class="qcs-eyebrow">Agir avec nous</p>' +
-        '<h2 class="qcs-h2">Comment saisir l’Arcom ou le CDJM ?</h2>' +
-        '<p class="qcs-cta-intro">Vous avez entendu à l’antenne ou lu dans la presse une information climatique erronée ou trompeuse ? ' +
-          "Chaque citoyen peut alerter les instances de régulation et d’autorégulation des médias. Plus les signalements sont nombreux et précis, plus ils pèsent.</p>" +
-        '<div class="qcs-cta-grid">' +
-          '<div class="qcs-cta-card">' +
-            "<h3>Alerter l’Arcom</h3>" +
-            "<p>Pour un programme de télévision ou de radio. Le formulaire en ligne prend environ cinq minutes.</p>" +
-            "<ul><li>Nom de la chaîne ou de la station</li><li>Date et heure de diffusion</li><li>Description des propos en cause</li></ul>" +
-            '<a class="qcs-btn" href="' + LINKS.arcom + '" target="_blank" rel="noopener">Signaler un programme</a>' +
-          "</div>" +
-          '<div class="qcs-cta-card">' +
-            "<h3>Saisir le CDJM</h3>" +
-            "<p>Pour tout contenu journalistique (presse écrite, web, radio, télévision). La saisine est gratuite et ouverte à toutes et tous.</p>" +
-            "<ul><li>Dans les trois mois suivant la diffusion</li><li>Lien ou copie du contenu</li><li>Passages précis et règle déontologique concernée</li></ul>" +
-            '<a class="qcs-btn" href="' + LINKS.cdjm + '" target="_blank" rel="noopener">Saisir le Conseil</a>' +
-          "</div>" +
-        "</div>" +
-      "</section>";
-
     var demoHtml = data.demo
       ? '<div class="qcs-error" style="padding:.75rem;margin-bottom:1.5rem;border:1px dashed currentColor;border-radius:.5rem">' +
         "Données fictives de démonstration : la synchronisation Notion n’est pas encore branchée.</div>"
       : "";
 
-    root.innerHTML = demoHtml + statsHtml + listHtml + ctaHtml;
+    root.innerHTML = demoHtml + statsHtml + listHtml;
 
     var grid = root.querySelector(".qcs-grid");
     var more = root.querySelector(".qcs-more");
@@ -230,8 +201,7 @@
     function filtered() {
       return all.filter(function (s) {
         return (!state.year || year(s.date) === state.year) &&
-          (!state.media || s.media === state.media) &&
-          (!state.instance || s.instance === state.instance);
+          (!state.media || s.media === state.media);
       });
     }
 
@@ -243,8 +213,7 @@
       visible.forEach(function (s) {
         var card = h(
           '<button type="button" class="qcs-card" aria-haspopup="dialog">' +
-            '<div class="qcs-card-top">' + badge(s) +
-              (s.instance ? '<span class="qcs-instance">' + esc(s.instance) + "</span>" : "") + "</div>" +
+            '<div class="qcs-card-top">' + badge(s) + "</div>" +
             '<h3 class="qcs-card-title">' + esc(s.name) + "</h3>" +
             thumb(s, dataUrl) +
             '<p class="qcs-meta">' + metaLine(s) + "</p>" +
@@ -263,7 +232,7 @@
       });
     });
     root.querySelector(".qcs-reset").addEventListener("click", function () {
-      state.year = state.media = state.instance = "";
+      state.year = state.media = "";
       state.shown = pageSize;
       root.querySelectorAll("select[data-f]").forEach(function (sel) { sel.value = ""; });
       draw();

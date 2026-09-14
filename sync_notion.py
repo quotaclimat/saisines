@@ -209,6 +209,11 @@ def main():
         if missing:
             sys.exit(f"Colonnes introuvables dans Notion : {missing}. "
                      f"Colonnes disponibles : {sorted(pages[0]['properties'])}")
+        props = pages[0]["properties"]
+        for key, col in FIELDS.items():
+            if col not in props:
+                print(f"  ! colonne optionnelle absente : {col!r}")
+        print("Colonnes Notion : " + ", ".join(f"{c!r} ({p['type']})" for c, p in sorted(props.items())))
 
     saisines, used_images = [], set()
     for page in pages:
@@ -240,6 +245,8 @@ def main():
         })
 
     saisines.sort(key=lambda s: s["date"], reverse=True)
+    for key in ("emission", "motif", "propos_html", "science_html", "illustration", "decryptage_url"):
+        print(f"  {key} rempli : {sum(bool(s[key]) for s in saisines)}/{len(saisines)}")
 
     # Nettoyage des images qui ne sont plus référencées
     if IMG_DIR.exists():

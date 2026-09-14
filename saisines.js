@@ -15,6 +15,9 @@
   var SCRIPT = document.currentScript;
   var BASE = SCRIPT ? new URL(".", SCRIPT.src).href : new URL(".", location.href).href;
 
+  var ICON_LINKEDIN = '<svg class="qcs-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>';
+  var ICON_EXTERNAL = '<svg class="qcs-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>';
+
   var MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet",
     "août", "septembre", "octobre", "novembre", "décembre"];
 
@@ -294,7 +297,9 @@
           opener = from;
           var dec = "";
           if (s.decryptage_url) {
-            dec = '<a class="qcs-btn" href="' + esc(s.decryptage_url) + '" target="_blank" rel="noopener">Lire notre analyse</a>';
+            // Picto LinkedIn si l'analyse est un post LinkedIn, flèche de lien externe sinon
+            var icon = /(^|\.)linkedin\.com$/i.test(new URL(s.decryptage_url, location.href).hostname) ? ICON_LINKEDIN : ICON_EXTERNAL;
+            dec = '<a class="qcs-btn" href="' + esc(s.decryptage_url) + '" target="_blank" rel="noopener">' + icon + "Lire notre analyse</a>";
           }
           dlg.innerHTML =
             '<button type="button" class="qcs-close" aria-label="Fermer">×</button>' +

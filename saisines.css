@@ -133,10 +133,11 @@
 .qcs-btn {
   display: inline-flex; align-items: center; gap: .5rem;
   background: var(--qcs-green); color: #fff !important; border: 0; border-radius: 9999px;
-  padding: .7rem 1.5rem; font-size: .9rem; font-weight: 600; cursor: pointer; text-decoration: none !important;
+  padding: .7rem 1.5rem; font-size: .9rem; font-weight: 600; line-height: 1.2; white-space: nowrap; cursor: pointer; text-decoration: none !important;
   transition: background .15s;
 }
 .qcs-btn:hover { background: var(--qcs-green-800); }
+.qcs-root .qcs-icon { width: 1rem; height: 1rem; flex-shrink: 0; display: block; }
 .qcs-btn--ghost { background: transparent; color: var(--qcs-green) !important; border: 1.5px solid var(--qcs-green); }
 .qcs-btn--ghost:hover { background: var(--qcs-green); color: #fff !important; }
 .qcs-empty, .qcs-loading, .qcs-error { padding: 2.5rem; text-align: center; color: var(--qcs-muted); font-size: .9rem; }

@@ -120,6 +120,7 @@
 }
 .qcs-badge::before { content: ""; width: .4rem; height: .4rem; border-radius: 9999px; background: currentColor; }
 .qcs-badge--encours { background: var(--qcs-green-50); color: var(--qcs-green); border-color: #cfe0cf; }
+.qcs-badge--recours { background: #eef2f7; color: #35577a; border-color: #cdd9e6; }
 .qcs-badge--intervention { background: #edf3ed; color: #2f5d32; border-color: #cfe0cf; }
 .qcs-badge--garde { background: #fdf3e3; color: #b45309; border-color: #f3dcb5; }
 .qcs-badge--demeure { background: #fdece2; color: #c2410c; border-color: #f5cdb4; }

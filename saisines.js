@@ -42,11 +42,12 @@
     return t.content.firstElementChild;
   }
 
-  // Statuts Notion : En cours, Intervention, Mise en garde, Mise en demeure,
+  // Statuts Notion : En cours, Recours gracieux, Intervention, Mise en garde, Mise en demeure,
   // Sanction financière, Perdue (vide = saisine non publique, filtrée à la synchro).
   function statutKey(statut) {
     var s = norm(statut);
     if (!s) return "";
+    if (/recours/.test(s)) return "recours";
     if (/cours/.test(s)) return "encours";
     if (/sanction/.test(s)) return "sanction";
     if (/demeure/.test(s)) return "demeure";

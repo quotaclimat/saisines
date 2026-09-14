@@ -49,7 +49,7 @@ Options du conteneur : `data-src` (autre URL de JSON), `data-css="false"`
 ## Statuts
 
 Valeurs attendues dans Notion : vide (saisine non publique, jamais exportée),
-En cours, Intervention, Mise en garde, Mise en demeure, Sanction financière, Perdue.
+En cours, Recours gracieux (refus de l'Arcom contesté par QuotaClimat), Intervention, Mise en garde, Mise en demeure, Sanction financière, Perdue.
 Intervention, mise en garde, mise en demeure et sanction financière comptent
 dans « Saisines gagnées » (voir `statutKey` dans `saisines.js`).
 

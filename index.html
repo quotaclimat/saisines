@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les saisines de QuotaClimat : Arcom & CDJM</title>
+  <meta name="description" content="Suivi des saisines de l'Arcom et du CDJM déposées par QuotaClimat pour défendre une information climatique fiable.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="saisines.css" data-qcs-css>
+  <style>
+    body { margin: 0; background: #FAF6F1; }
+    .page { max-width: 1280px; margin: 0 auto; padding: 2.5rem clamp(1rem, 5vw, 5rem) 4rem; }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div data-qc-saisines></div>
+  </main>
+  <script>
+    // ?demo : aperçu avec les données fictives de data/demo.json (non versionnées)
+    if (/[?&]demo\b/.test(location.search)) {
+      document.querySelector("[data-qc-saisines]").setAttribute("data-src", "data/demo.json");
+    }
+  </script>
+  <script src="saisines.js" defer></script>
+</body>
+</html>

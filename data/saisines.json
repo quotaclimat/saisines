@@ -1,6 +1,20 @@
 {
- "last_updated": "2026-09-14",
+ "last_updated": "2026-09-15",
  "saisines": [
+  {
+   "id": "3dbdf764f2cd",
+   "name": "Vincent Roy :  l’origine humaine du réchauffement climatique est une affaire d’opinion",
+   "media": "Europe 1",
+   "emission": "Europe 1 Info",
+   "date": "2026-07-15",
+   "statut": "En cours",
+   "motif": "Désinformation sur le consensus de la responsabilité anthropique dans le réchauffement climatique.",
+   "propos_html": "",
+   "science_html": "",
+   "illustration": "images/3dbdf764f2cd-eec8492d4e.jpg",
+   "decryptage_url": "",
+   "decryptage_html": ""
+  },
   {
    "id": "39cdf764f2cd",
    "name": "Marion Maréchal-Lepen interroge la part de l'Homme dans le réchauffement climatique",
@@ -24,6 +38,20 @@
    "statut": "En cours",
    "motif": "Manque de rigueur et d’honnêteté de l’information et perte de maîtrise de l’antenne",
    "propos_html": "",
+   "science_html": "",
+   "illustration": "images/39cdf764f2cd-5067fcf0f6.jpg",
+   "decryptage_url": "",
+   "decryptage_html": ""
+  },
+  {
+   "id": "3dbdf764f2cd",
+   "name": "François Gemenne : La climatisation  n'a aucun impact sur le climat en France",
+   "media": "LCI",
+   "emission": "Info en continu",
+   "date": "2026-06-24",
+   "statut": "En cours",
+   "motif": "Manque de rigueur et d’honnêteté de l’information",
+   "propos_html": "<a href=\"https://keywords.mediatree.fr/player/?fifo=lci&amp;start_cts=1782319499&amp;end_cts=1782319801&amp;position_cts=1782319680\" target=\"_blank\" rel=\"noopener\">https://keywords.mediatree.fr/player/?fifo=lci&amp;start_cts=1782319499&amp;end_cts=1782319801&amp;position_cts=1782319680</a> sur le fond maintenant un vrai ou faux sur le fond euh on entend dire justement que la climatisation participe à l&#x27; émission de carbone donc à l&#x27; effet de serre qui expliquent le réchauffement c&#x27; est vous vrai ou c&#x27; est faux est bien là c&#x27; est faux en revanche premier point david l&#x27; électricité qui sert à faire fonctionner la climatisation et décarboner en france en grâce à notre nucléaire mais aussi à nos barrages deuxième point les fameux gaz frigo origin ceux qui refroidissent l&#x27; air dans les circuits de la climatisation eux aussi émetteurs de co deux biens pendant longtemps il avait des fuites de gaz qui en plus avaient un pouvoir de réchauffement très important aujourd&#x27; hui avec les nouveaux gars qui sont utilisés dans les nouvelles machines c&#x27; est beau beaucoup moins le cas écouter sur ces points le chercheur françois gemenne expert reconnu sur le sujet pour la clim aujourd&#x27; hui ne pose pas de problème en france ",
    "science_html": "",
    "illustration": "",
    "decryptage_url": "",
@@ -67,7 +95,7 @@
    "motif": "Manque de rigueur et d’honnêteté de l’information et perte de maîtrise de l’antenne",
    "propos_html": "&quot;On le sait depuis de nombreuses années, grâce à de nombreuses études, qu&#x27;un seul supertanker qui traverse l&#x27;Atlantique pollue autant qu&#x27;un million de véhicules.&quot; &quot;C&#x27;est à cause de ces idées, de ces lubies qui ont été injectées dans le débat public, comme quoi les climatiseurs réchauffaient la planète. Tout ça, ce sont des conneries monumentales.&quot;<br>&quot;Il y a un mensonge qui est fait en disant que les énergies de type, enfin les dispositifs de type éolien ou solaire sont renouvelables. C&#x27;est faux. Ils sont arrimés à des moteurs thermiques. Les éoliennes, il faut le redire, fonctionnent 25% du temps. Les 75% du temps restant, c&#x27;est du gaz ou du charbon ou du pétrole. Donc à un moment donné, il faut dire que cette énergie est polluante.&quot; ",
    "science_html": "",
-   "illustration": "",
+   "illustration": "images/381df764f2cd-689014a6ab.jpg",
    "decryptage_url": "",
    "decryptage_html": ""
   },
@@ -95,7 +123,7 @@
    "motif": "Manque de rigueur et d’honnêteté de l’information et perte de maîtrise de l’antenne",
    "propos_html": "G. Lejeune : &quot;J&#x27;ai du mal à comprendre l&#x27;emballement tout à coup autour des vagues de chaleur qui sont pas encore au-dessus de 40 degrés non plus&quot; &quot;Les images qu&#x27;on vient de voir, c&#x27;est juste de l&#x27;inaptitude à avoir un animal, et les gens qui oublient leur enfant dans la voiture c&#x27;est un manque de bon sens absolu&quot; &quot;Dans le sud de la France, ces températures c&#x27;est vraiment quelque chose qui arrive régulièrement, les gens se sont adaptés et s&#x27;adaptent depuis très longtemps, et on n&#x27;a pas besoin de leur faire des tutoriels pour survivre en cas de forte chaleur”",
    "science_html": "",
-   "illustration": "",
+   "illustration": "images/372df764f2cd-f4497586fc.jpg",
    "decryptage_url": "",
    "decryptage_html": ""
   },
@@ -109,7 +137,7 @@
    "motif": "Manque de rigueur et d’honnêteté de l’information et perte de maîtrise de l’antenne",
    "propos_html": "&quot;C&#x27;est-à-dire que des Français qui ont des voitures anciennes... Mais qui ont un impact quand même sur la pollution ?&quot; &quot;Non, parce que vous savez très bien que dans nos villes, non, ce n&#x27;est pas démontré, que ça crée beaucoup d&#x27;embouteillages, qu&#x27;il n&#x27;y a effectivement pas de démonstration de la baisse de la pollution dans nos centres-villes à cause de ces ZFE. &quot; ",
    "science_html": "",
-   "illustration": "",
+   "illustration": "images/372df764f2cd-cf2b1c352c.jpg",
    "decryptage_url": "",
    "decryptage_html": ""
   },
@@ -123,7 +151,7 @@
    "motif": "Manque de rigueur et d’honnêteté de l’information et perte de maîtrise de l’antenne",
    "propos_html": "",
    "science_html": "",
-   "illustration": "",
+   "illustration": "images/36edf764f2cd-3318ac9e57.jpg",
    "decryptage_url": "",
    "decryptage_html": ""
   },
@@ -137,7 +165,7 @@
    "motif": "Manque de rigueur et d’honnêteté de l’information et perte de maîtrise de l’antenne",
    "propos_html": "&quot;Le dérèglement climatique est une réalité. A quel point est-il la responsabilité de l&#x27;homme ? A quel point les nations peuvent lutter contre ? A quel point les gaz à effet de serre sont un facteur compromettant ? Tout ça c&#x27;est un autre sujet. Le dérèglement climatique est une réalité sur notre planète, point à la ligne.”",
    "science_html": "",
-   "illustration": "",
+   "illustration": "images/36edf764f2cd-d46a88d9aa.jpg",
    "decryptage_url": "",
    "decryptage_html": ""
   },
@@ -151,7 +179,7 @@
    "motif": "Manque de rigueur et d’honnêteté de l’information et perte de maîtrise de l’antenne",
    "propos_html": "&quot;et moi je pense avoir réussi à démontrer que les ZFE ne servaient à rien pour améliorer la qualité de l&#x27;air, puisque l&#x27;amélioration technologique de nos voitures, et le renouvellement naturel de nos parcs automobiles ont permis de faire baisser de 25% la pollution du monoxyde d&#x27;azote et de 40% la pollution aux particules fines.&quot; ",
    "science_html": "",
-   "illustration": "",
+   "illustration": "images/36edf764f2cd-11321aaefd.jpg",
    "decryptage_url": "",
    "decryptage_html": ""
   },
@@ -165,7 +193,7 @@
    "motif": "Manque de rigueur et d’honnêteté de l’information et perte de maîtrise de l’antenne",
    "propos_html": "",
    "science_html": "",
-   "illustration": "",
+   "illustration": "images/36edf764f2cd-a5f50f478a.jpg",
    "decryptage_url": "",
    "decryptage_html": ""
   },
@@ -179,7 +207,7 @@
    "motif": "Manque de rigueur et d’honnêteté de l’information et perte de maîtrise de l’antenne",
    "propos_html": "&quot;- on voit bien que le GIEC aujourd&#x27;hui est obligé de corriger le tir, ils corrigent le tir, ils disent que c&#x27;est pas 4,5 que c&#x27;est 3,5<br>- que c&#x27;est trop alarmiste<br>- bah oui, ils sont obligés de corriger d&#x27;un degré leurs prévisions. DOnc soit ils se sont gourrés ou ils ont menti, soit les politiques écologiques, notamment de l&#x27;occident sont efficaces, c&#x27;est l&#x27;un ou l&#x27;auutre. Mais dans les deux cas de figures, ça veut dire que le GIEC racontait n&#x27;importe quoi. C&#x27;est quand même très gênant : soit il était alarmiste et désarmait l&#x27;action, soit il mentait en disant 4,5. C&#x27;est très probablement un mensonge et il le savait. C&#x27;est le problème, quand on est un club scientifique aussi important, on ne peut pas se permettre de raconter n&#x27;importe quoi.”",
    "science_html": "",
-   "illustration": "",
+   "illustration": "images/36edf764f2cd-9f7ea5dafd.jpg",
    "decryptage_url": "https://www.linkedin.com/posts/quotaclimat_cette-s%C3%A9quence-choque-nous-saisissons-l-activity-7464929603912986625-Src8?utm_source=share&utm_medium=member_desktop&rcm=ACoAADahfOQB3jITrGVNZDSALwz1T3So60L4Z1g",
    "decryptage_html": ""
   },
@@ -193,7 +221,7 @@
    "motif": "Manque de rigueur et d’honnêteté de l’information",
    "propos_html": "R. Ménard &quot;qu&#x27;il y ait un changement climatique mais enfin moi je le vois chez moi sans l&#x27;ombre d&#x27;un doute, mais la part du réchauffement climatique due à l&#x27;activité humaine, la part des cycles, des cycles du temps et tout ça, je n&#x27;en sais rien”",
    "science_html": "",
-   "illustration": "",
+   "illustration": "images/352df764f2cd-4604ef9da3.jpg",
    "decryptage_url": "https://www.linkedin.com/posts/quotaclimat_mercredi-sur-lci-la-chaine-info-le-maire-activity-7450800340863696896-iq6H?utm_source=share&utm_medium=member_desktop&rcm=ACoAADahfOQB3jITrGVNZDSALwz1T3So60L4Z1g",
    "decryptage_html": ""
   },
@@ -249,7 +277,7 @@
    "motif": "Manque de rigueur et d’honnêteté de l’information",
    "propos_html": "Manu n&#x27;est pas en faveur des voitures électriques<br>- &quot;Enedis me dit qu&#x27;il y a des régions où je ne peux plus aller parce qu&#x27;il y a surplus électrique&quot;<br>- Le fait de promouvoir les éloliennes et le PV surcharge notre réseau<br>- On ne peut plus produire d&#x27;électricité en énergie verte parce que le réseau ne supporte plus<br>- Le journaliste de dire &quot;un trop gros afflux d&#x27;énergie renouvelable et ça a fait péter le système&quot; sur le blackout en Espagne, citant l&#x27;article du Figaro<br>- Production de VE faite à 90% par les chinois, PV à 100% chinois",
    "science_html": "",
-   "illustration": "",
+   "illustration": "images/319df764f2cd-c62fc9e695.jpg",
    "decryptage_url": "",
    "decryptage_html": ""
   },
@@ -277,7 +305,7 @@
    "motif": "Rigueur et honnêteté de l’information",
    "propos_html": "",
    "science_html": "",
-   "illustration": "",
+   "illustration": "images/2eadf764f2cd-ab02bd1d22.jpg",
    "decryptage_url": "https://www.linkedin.com/feed/update/urn:li:activity:7406966443067539456",
    "decryptage_html": ""
   },
@@ -305,7 +333,7 @@
    "motif": "Manque de rigueur et d’honnêteté de l’information et perte de maîtrise de l’antenne",
    "propos_html": "",
    "science_html": "",
-   "illustration": "",
+   "illustration": "images/2b6df764f2cd-93a20c75c4.jpg",
    "decryptage_url": "https://www.linkedin.com/posts/quotaclimat_samedi-michel-onfray-a-affirm%C3%A9-sans-contradiction-activity-7399356240155426816-hs-A?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAttNCcBT9cAaKh9N4REMZgI4eup0dkZHdE",
    "decryptage_html": ""
   },
@@ -333,7 +361,7 @@
    "motif": "Manque de rigueur et d’honnêteté de l’information",
    "propos_html": "",
    "science_html": "",
-   "illustration": "",
+   "illustration": "images/1a5df764f2cd-e4d18fe8a0.jpg",
    "decryptage_url": "https://www.linkedin.com/posts/quotaclimat_naufrage-m%C3%A9diatique-dampleur-hier-radio-activity-7298972289688109056-kxqq/",
    "decryptage_html": ""
   },
@@ -347,7 +375,7 @@
    "motif": "Manque de rigueur et d’honnêteté de l’information",
    "propos_html": "",
    "science_html": "",
-   "illustration": "",
+   "illustration": "images/a3f51c7e761c-4f5c94a9ec.jpg",
    "decryptage_url": "https://www.linkedin.com/posts/quotaclimat_malgr%C3%A9-deux-mises-en-garde-de-larcom-pour-activity-7292076825831223296-37QS?utm_source=share&utm_medium=member_desktop",
    "decryptage_html": ""
   },
@@ -361,7 +389,7 @@
    "motif": "Manque de rigueur et d’honnêteté de l’information",
    "propos_html": "",
    "science_html": "",
-   "illustration": "",
+   "illustration": "images/5072272d4676-6647edae09.jpg",
    "decryptage_url": "https://www.linkedin.com/feed/update/urn:li:activity:7291870498274050048",
    "decryptage_html": ""
   },
@@ -375,7 +403,7 @@
    "motif": "Manque de rigueur et d’honnêteté de l’information",
    "propos_html": "",
    "science_html": "",
-   "illustration": "",
+   "illustration": "images/a7fa69eb0916-db4a73cb4e.jpg",
    "decryptage_url": "https://www.linkedin.com/feed/update/urn:li:activity:7271880212496191489/?actorCompanyId=79466248",
    "decryptage_html": ""
   },
@@ -389,7 +417,7 @@
    "motif": "Manque de rigueur et d’honnêteté de l’information",
    "propos_html": "",
    "science_html": "",
-   "illustration": "",
+   "illustration": "images/714a52ca867d-43bb3485f6.jpg",
    "decryptage_url": "https://www.linkedin.com/feed/update/urn:li:activity:7261999938539024385",
    "decryptage_html": ""
   },
@@ -403,7 +431,7 @@
    "motif": "Manque de rigueur et d’honnêteté de l’information",
    "propos_html": "",
    "science_html": "",
-   "illustration": "",
+   "illustration": "images/72dff0cabd66-36388d3ced.jpg",
    "decryptage_url": "https://www.linkedin.com/feed/update/urn:li:activity:7260957498096988160",
    "decryptage_html": ""
   },
@@ -417,7 +445,7 @@
    "motif": "Manque de rigueur et d’honnêteté de l’information",
    "propos_html": "",
    "science_html": "",
-   "illustration": "",
+   "illustration": "images/f9f0cc612e75-cde485c817.jpg",
    "decryptage_url": "https://www.linkedin.com/feed/update/urn:li:activity:7258398352185212928",
    "decryptage_html": ""
   },
@@ -431,7 +459,7 @@
    "motif": "Manque de rigueur et d’honnêteté de l’information",
    "propos_html": "",
    "science_html": "",
-   "illustration": "",
+   "illustration": "images/5f9593b23e05-11f031be8f.jpg",
    "decryptage_url": "https://www.linkedin.com/posts/quotaclimat_malgr%C3%A9-deux-mises-en-garde-de-larcom-sud-activity-7255119809523191810-FPKD?utm_source=share&utm_medium=member_desktop",
    "decryptage_html": ""
   },
@@ -445,7 +473,7 @@
    "motif": "Manque de rigueur et d’honnêteté de l’information",
    "propos_html": "",
    "science_html": "",
-   "illustration": "",
+   "illustration": "images/8342c30116ef-9ee0c1883f.jpg",
    "decryptage_url": "https://www.linkedin.com/posts/quotaclimat_lundi-sur-franceinfo-un-intervenant-a-r%C3%A9p%C3%A9t%C3%A9-activity-7247134093455372288-heoB?utm_source=share&utm_medium=member_desktop",
    "decryptage_html": ""
   },
@@ -459,7 +487,7 @@
    "motif": "Manque de rigueur et d’honnêteté de l’information",
    "propos_html": "",
    "science_html": "",
-   "illustration": "",
+   "illustration": "images/fc1e83274910-aef2e36924.jpg",
    "decryptage_url": "https://www.linkedin.com/posts/quotaclimat_lundi-sur-france-inter-mathieu-kassovitz-activity-7248743371068833792-t-MW?utm_source=share&utm_medium=member_desktop",
    "decryptage_html": ""
   },
@@ -473,7 +501,7 @@
    "motif": "Absence de diversité des points de vue",
    "propos_html": "",
    "science_html": "",
-   "illustration": "",
+   "illustration": "images/798fe69fa2f6-cfe1a8a81a.jpg",
    "decryptage_url": "https://www.linkedin.com/posts/quotaclimat_lors-des-22-minutes-d%C3%A9mission-%C3%A0-charge-sur-activity-7246412394732621824-MWFq?utm_source=share&utm_medium=member_desktop",
    "decryptage_html": ""
   },
@@ -487,7 +515,7 @@
    "motif": "Promotion clandestine d’un produit ou d’un service commercial au cours d’un programme",
    "propos_html": "",
    "science_html": "",
-   "illustration": "",
+   "illustration": "images/31be17feef89-b4f43d6fdb.jpg",
    "decryptage_url": "https://www.linkedin.com/feed/update/urn:li:activity:7241121146102779904",
    "decryptage_html": ""
   },
@@ -501,7 +529,7 @@
    "motif": "Désinformation sur les émissions associées à l’extraction pétrolière",
    "propos_html": "",
    "science_html": "",
-   "illustration": "",
+   "illustration": "images/ed539c874e5a-8dbf3fd05d.jpg",
    "decryptage_url": "https://www.linkedin.com/posts/quotaclimat_cet-%C3%A9dito-de-mac-lessgy-sur-rtl-affirme-que-activity-7200747134541856768-U0tG?utm_source=share&utm_medium=member_desktop",
    "decryptage_html": ""
   },
@@ -529,7 +557,7 @@
    "motif": "Greenwashing mensonger",
    "propos_html": "",
    "science_html": "",
-   "illustration": "",
+   "illustration": "images/eab8a1a63535-6c646969f5.jpg",
    "decryptage_url": "https://www.linkedin.com/posts/quotaclimat_cest-scandaleux-la-radio-publique-diffuse-activity-7190379247910158336-EAcc/?originalSubdomain=fr",
    "decryptage_html": ""
   },
@@ -557,7 +585,7 @@
    "motif": "Désinformation - Non respect des faits, manquement au pluralisme",
    "propos_html": "",
    "science_html": "",
-   "illustration": "",
+   "illustration": "images/86e7eddb82f8-ca25faab57.jpg",
    "decryptage_url": "https://www.linkedin.com/posts/quotaclimat_le-traitement-m%C3%A9diatique-de-la-crise-agricole-activity-7157424591810777088-hRTk?utm_source=share&utm_medium=member_desktop",
    "decryptage_html": ""
   },
@@ -571,7 +599,7 @@
    "motif": "Complotisme climatique",
    "propos_html": "",
    "science_html": "",
-   "illustration": "",
+   "illustration": "images/67254ba33248-bfe7002228.jpg",
    "decryptage_url": "https://www.linkedin.com/posts/quotaclimat_voici-la-preuve-que-le-climatoscepticisme-activity-7138791815008186368-LxLm/?originalSubdomain=fr",
    "decryptage_html": ""
   },
@@ -585,7 +613,7 @@
    "motif": "Désinformation - Climato scepticisme sans contradiction",
    "propos_html": "",
    "science_html": "",
-   "illustration": "",
+   "illustration": "images/861371ff6009-e1cb80b6d0.jpg",
    "decryptage_url": "https://www.linkedin.com/posts/quotaclimat_cnews-a-encore-invit%C3%A9-un-climatosceptique-activity-7102185804973621249-Mie9/?originalSubdomain=fr",
    "decryptage_html": ""
   },
@@ -599,7 +627,7 @@
    "motif": "Désinformation climatique",
    "propos_html": "",
    "science_html": "",
-   "illustration": "",
+   "illustration": "images/8f695e96d13e-3915f1116d.jpg",
    "decryptage_url": "https://www.linkedin.com/posts/quotaclimat_r%C3%A9voltant-voici-une-intervention-de-christophe-activity-7088814482231058432-1xiB/?utm_source=share&utm_medium=member_desktop",
    "decryptage_html": ""
   }

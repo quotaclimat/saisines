@@ -222,9 +222,20 @@
       });
     }
 
+    // Nombre de colonnes réellement affichées par la grille (auto-fill, dépend de la largeur)
+    function columns() {
+      return getComputedStyle(grid).gridTemplateColumns.split(" ").filter(Boolean).length || 1;
+    }
+    // Arrondi au multiple de colonnes supérieur pour que la dernière ligne soit complète
+    function visibleCount() {
+      var c = columns();
+      return Math.ceil(state.shown / c) * c;
+    }
+
     function draw() {
       var list = filtered();
-      var visible = list.slice(0, state.shown);
+      var n = visibleCount();
+      var visible = list.slice(0, n);
       count.textContent = list.length + " saisine" + (list.length > 1 ? "s" : "");
       grid.innerHTML = visible.length ? "" : '<div class="qcs-empty">Aucune saisine ne correspond à ces filtres.</div>';
       visible.forEach(function (s) {
@@ -238,7 +249,8 @@
         card.addEventListener("click", function () { dialog.open(s, card); });
         grid.appendChild(card);
       });
-      more.parentElement.hidden = list.length <= state.shown;
+      more.parentElement.hidden = list.length <= n;
+      drawnColumns = columns();
     }
 
     root.querySelectorAll("select[data-f]").forEach(function (sel) {
@@ -255,12 +267,23 @@
       draw();
     });
     more.addEventListener("click", function () {
-      var firstNew = state.shown;
-      state.shown += pageSize;
+      var firstNew = visibleCount();
+      state.shown = firstNew + pageSize;
       draw();
       var next = grid.children[firstNew];
       if (next) next.focus({ preventScroll: true });
     });
+
+    // On redessine quand le nombre de colonnes change : redimensionnement, mais aussi
+    // arrivée tardive de saisines.css (injecté en asynchrone dans WordPress)
+    var drawnColumns = 0, resizeTimer;
+    function onResize() {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function () { if (columns() !== drawnColumns) draw(); }, 100);
+    }
+    if (window.ResizeObserver) new ResizeObserver(onResize).observe(grid);
+    window.addEventListener("resize", onResize);
+    window.addEventListener("load", onResize);
 
     draw();
 

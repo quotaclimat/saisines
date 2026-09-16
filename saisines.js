@@ -190,7 +190,6 @@
 
     var listHtml =
       '<section class="qcs-section">' +
-        '<h2 class="qcs-h2">Nos saisines</h2>' +
         '<div class="qcs-filters">' +
           select("year", "Date", "Toutes les années", years) +
           select("media", "Média", "Tous les médias", medias) +

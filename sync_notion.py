@@ -46,6 +46,7 @@ FIELDS = {
     "illustration": "Illustration",
     "statut": "Statut",
     "decryptage": "Decryptage",
+    "conclusion": "Conclusion",   # décision de l'Arcom : lien ou phrase
     "motif": "Motif",
 }
 REQUIRED = {"name", "media", "date", "statut"}
@@ -160,6 +161,20 @@ def as_link(p):
     return "", ""
 
 
+def as_conclusion(p):
+    """Conclusion : un lien seul devient un bouton, une phrase reste du texte (liens cliquables)."""
+    if not p or p["type"] not in ("rich_text", "url"):
+        return "", ""
+    if p["type"] == "url":
+        return p["url"] or "", ""
+    parts = p["rich_text"]
+    text = plain(parts)
+    hrefs = [x["href"] for x in parts if x.get("href")]
+    if re.match(r"^https?://\S+$", text):
+        return (hrefs[0] if hrefs else text), ""
+    return "", rich_text_to_html(parts)
+
+
 # ---------------------------------------------------------------- Images ---
 
 def download_image(url, page_id):
@@ -229,6 +244,7 @@ def main():
                 images.append(path)
                 used_images.add(Path(path).name)
         decryptage_url, decryptage_html = as_link(prop(page, FIELDS["decryptage"]))
+        conclusion_url, conclusion_html = as_conclusion(prop(page, FIELDS["conclusion"]))
         saisines.append({
             "id": page["id"].replace("-", "")[:12],
             "name": name,
@@ -242,10 +258,12 @@ def main():
             "illustration": images[0] if images else "",
             "decryptage_url": decryptage_url,
             "decryptage_html": decryptage_html,
+            "conclusion_url": conclusion_url,
+            "conclusion_html": conclusion_html,
         })
 
     saisines.sort(key=lambda s: s["date"], reverse=True)
-    for key in ("emission", "motif", "propos_html", "science_html", "illustration", "decryptage_url"):
+    for key in ("emission", "motif", "propos_html", "science_html", "illustration", "decryptage_url", "conclusion_url", "conclusion_html"):
         print(f"  {key} rempli : {sum(bool(s[key]) for s in saisines)}/{len(saisines)}")
 
     # Nettoyage des images qui ne sont plus référencées

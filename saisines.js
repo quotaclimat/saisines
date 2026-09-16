@@ -287,6 +287,15 @@
         if (opener) opener.focus();
       });
 
+      function decision(s) {
+        if (!s.conclusion_url && !s.conclusion_html) return "";
+        return '<div class="qcs-decision"><span class="qcs-decision-label">Décision de l’Arcom</span>' +
+          (s.conclusion_url
+            ? '<a class="qcs-btn qcs-btn--ghost" href="' + esc(s.conclusion_url) + '" target="_blank" rel="noopener">' + ICON_EXTERNAL + "Lire la décision</a>"
+            : '<p class="qcs-decision-text">' + s.conclusion_html + "</p>") +
+          "</div>";
+      }
+
       function acc(title, html, extraClass) {
         if (!html) return "";
         return '<details class="qcs-acc ' + (extraClass || "") + '" open><summary>' + title + "</summary>" +
@@ -310,6 +319,7 @@
                 '<div class="qcs-dialog-meta">' + badge(s) + "<span>" + metaLine(s) + "</span></div>" +
                 '<h3 class="qcs-dialog-title" id="qcs-dlg-title">' + esc(s.name) + "</h3>" +
                 (s.motif ? '<p class="qcs-dialog-motif">' + esc(s.motif) + "</p>" : "") +
+                decision(s) +
                 acc("Propos tenus", s.propos_html, "qcs-acc--quote") +
                 acc("État des connaissances scientifiques", s.science_html) +
                 acc("Notre décryptage", s.decryptage_html) +

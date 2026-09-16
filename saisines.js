@@ -289,7 +289,9 @@
 
       function decision(s) {
         if (!s.conclusion_url && !s.conclusion_html) return "";
-        return '<div class="qcs-decision"><span class="qcs-decision-label">Décision de l’Arcom</span>' +
+        // Saisine pas encore tranchée : la conclusion décrit l'étape en cours, pas une décision
+        var pending = /^(encours|recours)$/.test(statutKey(s.statut));
+        return '<div class="qcs-decision"><span class="qcs-decision-label">' + (pending ? "Suivi de la saisine" : "Décision de l’Arcom") + "</span>" +
           (s.conclusion_url
             ? '<a class="qcs-btn qcs-btn--ghost" href="' + esc(s.conclusion_url) + '" target="_blank" rel="noopener">' + ICON_EXTERNAL + "Lire la décision</a>"
             : '<p class="qcs-decision-text">' + s.conclusion_html + "</p>") +

@@ -172,6 +172,9 @@ def as_conclusion(p):
     hrefs = [x["href"] for x in parts if x.get("href")]
     if re.match(r"^https?://\S+$", text):
         return (hrefs[0] if hrefs else text), ""
+    # Lien collé avec son titre de page (« Emission … | Arcom ») : tout le texte pointe vers un seul lien
+    if len(set(hrefs)) == 1 and all(x.get("href") or not x.get("plain_text", "").strip() for x in parts):
+        return hrefs[0], ""
     return "", rich_text_to_html(parts)
 
 
@@ -180,7 +183,7 @@ def as_conclusion(p):
 def download_image(url, page_id):
     """Télécharge une image, la redimensionne, renvoie le chemin relatif."""
     key = hashlib.sha1(url.split("?")[0].encode()).hexdigest()[:10]
-    stem = f"{page_id.replace('-', '')[:12]}-{key}"
+    stem = f"{page_id.replace('-', '')}-{key}"
     existing = list(IMG_DIR.glob(stem + ".*"))
     if existing:
         return f"images/{existing[0].name}"
@@ -246,7 +249,7 @@ def main():
         decryptage_url, decryptage_html = as_link(prop(page, FIELDS["decryptage"]))
         conclusion_url, conclusion_html = as_conclusion(prop(page, FIELDS["conclusion"]))
         saisines.append({
-            "id": page["id"].replace("-", "")[:12],
+            "id": page["id"].replace("-", ""),  # id complet : les 12 premiers caractères ne sont pas uniques
             "name": name,
             "media": as_text(prop(page, FIELDS["media"])),
             "emission": as_text(prop(page, FIELDS["emission"])),

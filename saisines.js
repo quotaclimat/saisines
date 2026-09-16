@@ -18,6 +18,9 @@
   var ICON_LINKEDIN = '<svg class="qcs-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>';
   var ICON_EXTERNAL = '<svg class="qcs-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>';
 
+  var VEILLE_URL = "https://quotaclimat.org/veille-des-decisions-regulation-autoregulation/";
+  var ICON_ARROW = '<svg class="qcs-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M8 7h9v9"/></svg>';
+
   var MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet",
     "août", "septembre", "octobre", "novembre", "décembre"];
 
@@ -206,7 +209,17 @@
         "Données fictives de démonstration : la synchronisation Notion n’est pas encore branchée.</div>"
       : "";
 
-    root.innerHTML = demoHtml + statsHtml + listHtml;
+    var seeAlsoHtml =
+      '<section class="qcs-section qcs-seealso">' +
+        '<h2 class="qcs-h2">À découvrir aussi : toutes les saisines reçues par l’Arcom et le CDJM</h2>' +
+        '<div class="qcs-seealso-card">' +
+          '<p class="qcs-seealso-text">Toutes les saisines réalisées auprès de l’Arcom et du CDJM sur les chaînes d’information en continu, ' +
+            "toutes thématiques confondues, depuis 2022.</p>" +
+          '<a class="qcs-btn" href="' + VEILLE_URL + '">Veille des saisines Arcom &amp; CDJM' + ICON_ARROW + "</a>" +
+        "</div>" +
+      "</section>";
+
+    root.innerHTML = demoHtml + statsHtml + listHtml + seeAlsoHtml;
 
     var grid = root.querySelector(".qcs-grid");
     var more = root.querySelector(".qcs-more");

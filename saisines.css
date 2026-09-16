@@ -143,6 +143,17 @@
 .qcs-empty, .qcs-loading, .qcs-error { padding: 2.5rem; text-align: center; color: var(--qcs-muted); font-size: .9rem; }
 .qcs-error { color: var(--qcs-red); }
 
+/* ── À découvrir aussi ── */
+.qcs-seealso { margin-top: 4rem; margin-bottom: 0; }
+.qcs-seealso-card {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.25rem 2rem;
+  background: #fff; border: 1px solid var(--qcs-line); border-left: 3px solid var(--qcs-green);
+  border-radius: var(--qcs-radius); box-shadow: var(--qcs-shadow);
+  padding: 1.5rem 1.75rem;
+}
+.qcs-root .qcs-seealso-text { flex: 1 1 22rem; max-width: 42rem; margin: 0; font-size: .95rem; line-height: 1.6; color: var(--qcs-green-800); }
+.qcs-seealso-card .qcs-btn { flex-shrink: 0; white-space: normal; text-align: left; }
+
 /* ── Fiche détaillée (dialog) ── */
 .qcs-dialog {
   width: min(720px, calc(100vw - 2rem)); max-height: calc(100vh - 2rem);

@@ -1,5 +1,5 @@
 {
- "last_updated": "2026-09-17",
+ "last_updated": "2026-09-23",
  "saisines": [
   {
    "id": "3dbdf764f2cd807fac81ce2c868ae0bc",
@@ -57,7 +57,7 @@
    "date": "2026-06-24",
    "statut": "En cours",
    "motif": "Manque de rigueur et d’honnêteté de l’information",
-   "propos_html": "<strong>“ la climatisation participe à l&#x27;émission de carbone donc à l&#x27;effet de serre, qui explique le réchauffement : c&#x27;est vrai ou c&#x27;est faux</strong> ?&quot;<br>La journaliste répond : <br>“Eh bien là, <strong>c’est faux</strong> en revanche. Premier point David : <strong>l&#x27;électricité qui sert à faire fonctionner la climatisation est décarbonée en France</strong>, en grande partie grâce à notre nucléaire mais aussi à nos barrages. Deuxième point : <strong>les fameux gaz frigorigènes, ceux qui refroidissent l&#x27;air dans les circuits de la climatisation”</strong>",
+   "propos_html": "<strong>“ la climatisation participe à l&#x27;émission de carbone donc à l&#x27;effet de serre, qui explique le réchauffement : c&#x27;est vrai ou c&#x27;est faux</strong> ?&quot;<br>La journaliste répond : <br>“Eh bien là, <strong>c’est faux</strong> en revanche. Premier point David : <strong>l&#x27;électricité qui sert à faire fonctionner la climatisation est décarbonée en France</strong>, en grande partie grâce à notre nucléaire mais aussi à nos barrages. Deuxième point : <strong>les fameux gaz frigorigènes, ceux qui refroidissent l&#x27;air dans les circuits de la climatisation</strong>, eux aussi émetteurs de CO2, eh bien pendant longtemps il y avait des fuites de gaz, qui en plus avaient un pouvoir de réchauffement très important. Aujourd&#x27;hui avec les nouveaux gaz qui sont utilisés dans les nouvelles machines c&#x27;est beaucoup moins le cas.”",
    "science_html": "",
    "illustration": "images/3dbdf764f2cd8016b62ef4df72158964-d35f5d19ef.jpg",
    "decryptage_url": "",

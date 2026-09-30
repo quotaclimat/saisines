@@ -1,6 +1,38 @@
 {
- "last_updated": "2026-09-23",
+ "last_updated": "2026-09-30",
  "saisines": [
+  {
+   "id": "3eadf764f2cd80578cf1dd8628f07014",
+   "name": "Philippe Ballard : L'intermittence des énergies renouvelables a causé le black-out en Espagne.",
+   "media": "BFMTV",
+   "emission": "100% Mabrouk",
+   "date": "2026-09-22",
+   "statut": "En cours",
+   "motif": "Manque de rigueur et d’honnêteté de l’information et perte de maîtrise de l’antenne",
+   "propos_html": "« On a les énergies intermittentes. Les éoliennes, ça coûte plus cher que ça rapporte. <strong>En plus, vous vous souvenez de l&#x27;Espagne, il y a un peu plus d &#x27;un an, au mois de juin dernier ? Pardon, mais tout le réseau a pété. Maintenant, on sait très bien que c&#x27;est à cause des énergies intermittentes, parce qu &#x27;elles ne sont pas pilotables, comme on dit. C&#x27;est-à-dire qu’on envoie dans les circuits, les réseaux… paf. Ça explose.</strong> Au moins, le nucléaire, on peut le piloter.  »",
+   "science_html": "",
+   "illustration": "images/3eadf764f2cd80578cf1dd8628f07014-58af5eccb1.jpg",
+   "decryptage_url": "",
+   "decryptage_html": "",
+   "conclusion_url": "",
+   "conclusion_html": ""
+  },
+  {
+   "id": "3e2df764f2cd80f080dde7bd4431b426",
+   "name": "Philippe Ballard : Le black-out en Espagne est dû aux énergies intermittentes.",
+   "media": "LCI",
+   "emission": "Brunet Sans Filtre",
+   "date": "2026-09-14",
+   "statut": "En cours",
+   "motif": "Manque de rigueur et d’honnêteté de l’information et perte de maîtrise de l’antenne",
+   "propos_html": "« Les énergies intermittentes. Mais c&#x27;est un gouffre financier terrible. Mais c&#x27;est un gouffre financier terrible. Là, plus on avance maintenant, plus on s&#x27;aperçoit qu&#x27;effectivement, c&#x27;est un gouffre financier. C&#x27;est subventionné et ça ne sert à rien. Pour raccorder les éoliennes offshore en mer, ça va coûter des dizaines de milliards d&#x27;euros. Et quand il n&#x27;y a pas de vent, il n&#x27;y a rien. <strong>Alors on est obligé de mettre une centrale qui fonctionne au gaz pour produire l&#x27;électricité. Et ce qui s&#x27;est passé en Espagne il y a un peu plus d&#x27;un an, quand tout le système a pété, on sait maintenant très bien que c&#x27;est à cause des énergies intermittentes</strong>. » ",
+   "science_html": "",
+   "illustration": "images/3e2df764f2cd80f080dde7bd4431b426-a5fa1a4e5c.jpg",
+   "decryptage_url": "",
+   "decryptage_html": "",
+   "conclusion_url": "",
+   "conclusion_html": ""
+  },
   {
    "id": "3dbdf764f2cd807fac81ce2c868ae0bc",
    "name": "Vincent Roy :  l’origine humaine du réchauffement climatique est une affaire d’opinion",

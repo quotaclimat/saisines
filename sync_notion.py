@@ -40,7 +40,7 @@ FIELDS = {
     "name": "Name",
     "media": "Media",
     "emission": "Emission",
-    "date": "Date",
+    "date": "Date de la séquence",
     "propos": "Propos tenus",
     "science": "Etat des connaissances scientifiques",
     "illustration": "Illustration",

@@ -19,6 +19,7 @@
   var ICON_EXTERNAL = '<svg class="qcs-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>';
 
   var VEILLE_URL = "https://quotaclimat.org/veille-des-decisions-regulation-autoregulation/";
+  var ICON_CLOSE = '<svg class="qcs-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>';
   var ICON_ARROW = '<svg class="qcs-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M8 7h9v9"/></svg>';
 
   var MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet",
@@ -91,9 +92,9 @@
     if (s.illustration) {
       // Chemins d'images relatifs à la racine du site (dossier du script), pas au dossier du JSON
       var src = new URL(s.illustration, BASE).href;
-      return '<div class="qcs-thumb"><img src="' + esc(src) + '" alt="" loading="lazy" decoding="async"></div>';
+      return '<span class="qcs-thumb"><img src="' + esc(src) + '" alt="" loading="lazy" decoding="async"></span>';
     }
-    return '<div class="qcs-thumb"><span class="qcs-thumb-empty">' + esc(s.media || "QuotaClimat") + "</span></div>";
+    return '<span class="qcs-thumb"><span class="qcs-thumb-empty">' + esc(s.media || "QuotaClimat") + "</span></span>";
   }
 
   function uniq(arr) {
@@ -153,17 +154,17 @@
     }
 
     var statsHtml =
-      '<section class="qcs-section">' +
+      '<section class="qcs-section qcs-summary">' +
         '<h2 class="qcs-h2">Les saisines réalisées par QuotaClimat</h2>' +
         '<div class="qcs-stats">' +
           '<div class="qcs-stat">' +
-            '<div class="qcs-stat-total">' + all.length + "</div>" +
-            '<div class="qcs-stat-label">Saisine' + (all.length > 1 ? "s" : "") + " réalisée" + (all.length > 1 ? "s" : "") + "</div>" +
+            '<p class="qcs-figure"><span class="qcs-stat-total">' + all.length + "</span>" +
+            '<span class="qcs-stat-label">saisine' + (all.length > 1 ? "s" : "") + " réalisée" + (all.length > 1 ? "s" : "") + "</span></p>" +
             '<ul class="qcs-stat-list">' + mediaRows.map(function (m) { return li(m, byMedia[m]); }).join("") + "</ul>" +
           "</div>" +
           '<div class="qcs-stat qcs-stat--won">' +
-            '<div class="qcs-stat-total">' + wonTotal + "</div>" +
-            '<div class="qcs-stat-label">Saisine' + (wonTotal > 1 ? "s" : "") + " gagnée" + (wonTotal > 1 ? "s" : "") + "</div>" +
+            '<p class="qcs-figure"><span class="qcs-stat-total">' + wonTotal + "</span>" +
+            '<span class="qcs-stat-label">saisine' + (wonTotal > 1 ? "s" : "") + " gagnée" + (wonTotal > 1 ? "s" : "") + "</span></p>" +
             '<ul class="qcs-stat-list">' + wonRows.map(function (w) { return li(w.label, byStatut[w.key] || 0); }).join("") + "</ul>" +
           "</div>" +
         "</div>" +
@@ -253,10 +254,12 @@
       visible.forEach(function (s) {
         var card = h(
           '<button type="button" class="qcs-card" aria-haspopup="dialog">' +
-            '<div class="qcs-card-top">' + badge(s) + "</div>" +
-            '<span class="qcs-card-title">' + esc(s.name) + "</span>" +
             thumb(s) +
-            '<p class="qcs-meta">' + metaLine(s) + "</p>" +
+            '<span class="qcs-card-body">' +
+              badge(s) +
+              '<span class="qcs-card-title">' + esc(s.name) + "</span>" +
+              '<span class="qcs-meta">' + metaLine(s) + "</span>" +
+            "</span>" +
           "</button>");
         card.addEventListener("click", function () { dialog.open(s, card); });
         grid.appendChild(card);
@@ -349,7 +352,7 @@
             dec = '<a class="qcs-btn" href="' + esc(s.decryptage_url) + '" target="_blank" rel="noopener">' + icon + "Lire notre analyse</a>";
           }
           dlg.innerHTML =
-            '<button type="button" class="qcs-close" aria-label="Fermer">×</button>' +
+            '<button type="button" class="qcs-close" aria-label="Fermer">' + ICON_CLOSE + '</button>' +
             '<div class="qcs-dialog-scroll">' +
               thumb(s) +
               '<div class="qcs-dialog-body">' +

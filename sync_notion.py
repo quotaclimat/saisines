@@ -128,6 +128,27 @@ def as_html(p):
     return escape(as_text(p))
 
 
+def _letters(s):
+    return re.sub(r"[^a-zà-ÿ]", "", s.lower())
+
+
+def strip_redundant_heading(html, title):
+    """Retire l'en-tête initial quand il ne fait que répéter le titre de la section.
+
+    Les cellules Notion du contexte commencent par « 📺 Contexte de la saisine : »
+    suivi d'un saut de ligne, ce qui ferait doublon avec l'intitulé de l'accordéon
+    sur le site. On ne coupe que si le texte avant le premier <br>, débarrassé de
+    ses balises et de sa puce, correspond exactement au titre.
+    """
+    if not html:
+        return html
+    m = re.match(r"(?is)^(.{0,120}?)<br\s*/?>", html)
+    if not m or _letters(re.sub(r"<[^>]+>", "", m.group(1))) != _letters(title):
+        return html
+    # le <br> est souvent à l'intérieur du <strong>, qui laisse une fermeture orpheline
+    return re.sub(r"(?i)^(?:</(?:strong|em)>)+", "", html[m.end():]).lstrip()
+
+
 def as_date(p):
     if not p or p["type"] != "date" or not p["date"]:
         return ""
@@ -257,7 +278,8 @@ def main():
             "date": as_date(prop(page, FIELDS["date"])),
             "statut": statut,
             "motif": as_text(prop(page, FIELDS["motif"])),
-            "contexte_html": as_html(prop(page, FIELDS["contexte"])),
+            "contexte_html": strip_redundant_heading(
+                as_html(prop(page, FIELDS["contexte"])), FIELDS["contexte"]),
             "propos_html": as_html(prop(page, FIELDS["propos"])),
             "science_html": as_html(prop(page, FIELDS["science"])),
             "illustration": images[0] if images else "",

@@ -360,6 +360,7 @@
                 '<h3 class="qcs-dialog-title" id="qcs-dlg-title">' + esc(s.name) + "</h3>" +
                 (s.motif ? '<p class="qcs-dialog-motif">' + esc(s.motif) + "</p>" : "") +
                 decision(s) +
+                acc("Contexte de la saisine", s.contexte_html) +
                 acc("Propos tenus", s.propos_html, "qcs-acc--quote") +
                 acc("État des connaissances scientifiques", s.science_html) +
                 acc("Notre décryptage", s.decryptage_html) +

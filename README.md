@@ -15,8 +15,9 @@ Notion ──(GitHub Actions, chaque jour 5h UTC)──> data/saisines.json + im
 ```
 
 - `sync_notion.py` interroge l'API Notion, n'exporte que les champs publics
-  (Name, Media, Emission, Date, Motif, Propos tenus, Etat des connaissances scientifiques,
-  Illustration, Statut, Decryptage) des lignes cochées « Public » dont le Statut est rempli, et
+  (Name, Media, Emission, Date de la séquence, Motif, Contexte de la saisine, Propos tenus,
+  Etat des connaissances scientifiques, Illustration, Statut, Decryptage, Conclusion)
+  des lignes cochées « Public » dont le Statut est rempli, et
   télécharge les illustrations (les URL de fichiers Notion expirent après 1 h).
 - Le workflow `.github/workflows/sync.yml` committe uniquement si quelque chose a changé.
 
